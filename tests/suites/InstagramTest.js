@@ -2,7 +2,7 @@ import ExamplePage from '../page_model/example_model'
 
 const page = new ExamplePage();
 
-	fixture `Getting Started`
+	fixture `Instagram Test`
     .page `http://devexpress.github.io/testcafe/example`;
 
 
