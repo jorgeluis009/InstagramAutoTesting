@@ -1,22 +1,17 @@
-import ExamplePage from '../page_model/example_model'
+import ExamplePage from '../page_model/Instagram_model.js'
 
 const page = new ExamplePage();
 
 	fixture `Instagram Test`
-    .page `http://devexpress.github.io/testcafe/example`;
+    .page `https://www.instagram.com/?hl=es-la`;
 
+test('Instagram Sign In', async t => {
+    var mail = 'fofawam582@smlmail.com';
+    var p = 'GenericPassword1';
 
-test('My first test', async t => {
-	const name = 'Jorge Luis';
-    await t
-    	.typeText(page.inputName, name)
-    	.click(page.checkboxRemoteTesting)
-    	.click(page.checkboxAdvanceTraffic)
-    	.click(page.triedTestCafe)
-    	.typeText(page.commentSection, "Hello I'm a comment")
-    	.wait(2000)
-        .click(page.submitBtn)
-		.wait(2000)
-
-		await t.expect(page.thankYouMsg.innerText).contains(name);
+    await t        
+        .typeText(page.mailInput, mail)
+    	.typeText(page.passInput, p)
+        .click(page.signInBtn)
+		.wait(5000)
 });

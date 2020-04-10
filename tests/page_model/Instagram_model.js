@@ -2,13 +2,11 @@ import {Selector, t} from 'testcafe';
 
 export default class ExamplePage {
 	constructor() {
-		this.inputName = Selector('#developer-name');
-		this.checkboxRemoteTesting = Selector('input').withAttribute('name','remote');
-		this.checkboxAdvanceTraffic = Selector('input').withAttribute('name','analysis');
-		this.triedTestCafe = Selector('input[name=tried-test-cafe]');
-		this.thankYouMsg = Selector('#article-header');
-		this.submitBtn = Selector('#submit-button');
-		this.windows = Selector('#windows');
-		this.commentSection = Selector('#comments');
+		// this.changeAccount = Selector('.sqdOP yWX7d    y3zKF     ').withText('Mostrar');;
+		// this.showPass = Selector('.sqdOP yWX7d     _8A5w5    ');
+		this.mailInput = Selector('input[name=username]');
+		this.passInput = Selector('input[name=password]');
+		this.signInBtn = Selector('button[type=submit]');
+
 	}
 }
